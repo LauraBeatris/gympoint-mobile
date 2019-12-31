@@ -60,6 +60,12 @@ function HelpOrder({ theme, navigation }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    const newQuestion = navigation.getParam('q  uestion');
+    console.tron.log(newQuestion);
+    if (newQuestion) setHelpOrders([...helpOrders, newQuestion]);
+  }, [helpOrders, navigation]);
+
   async function handleNextPage() {
     setPage(page + 1);
     const response = await api.get(
@@ -106,9 +112,13 @@ function HelpOrder({ theme, navigation }) {
           <Button onPress={createHelpOrder}> Novo pedido de auxílio </Button>
           <List
             data={helpOrders}
-            keyExtractor={item => String(item)}
+            keyExtractor={item => String(item.id)}
             renderItem={({ item }) => (
-              <HelpOrderItem>
+              <HelpOrderItem
+                onPress={() =>
+                  navigation.navigate('ViewHelpOrder', { helpOrder: item })
+                }
+              >
                 <HelpOrderInformations>
                   <IsAnsweredWrapper>
                     <IsAnsweredIcon answered={!!item.answer_at} />

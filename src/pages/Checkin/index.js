@@ -96,7 +96,7 @@ function Checkin({ theme }) {
     <Container loading={loading}>
       {!loading ? (
         <>
-          <Button onPress={createCheckIn}>Novo checkin-in</Button>
+          <Button onPress={createCheckIn}>Novo check-in</Button>
           <List
             data={checkins}
             keyExtractor={item => String(item.id)}

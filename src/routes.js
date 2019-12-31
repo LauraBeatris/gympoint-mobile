@@ -8,7 +8,7 @@ import Signin from '~/pages/SignIn';
 import Checkin from '~/pages/Checkin';
 import HelpOrder from '~/pages/HelpOrder';
 import ViewHelpOrder from '~/pages/HelpOrder/view';
-import CreateHelpOrder from '~/pages/HelpOrder/create';
+import CreateHelpOrder from '~/pages/HelpOrder/New';
 
 import theme from '~/styles/theme';
 
@@ -30,6 +30,12 @@ export default (signedIn = false) =>
                     headerTintColor: '#000',
                     headerLeftContainerStyle: {
                       marginLeft: 20,
+                    },
+                    headerTitleStyle: {
+                      alignSelf: 'center',
+                    },
+                    headerStyle: {
+                      backgroundColor: theme.white,
                     },
                   },
                 }
@@ -72,6 +78,12 @@ export default (signedIn = false) =>
               activeTintColor: theme.primary,
               inactiveTintColor: theme.textLight,
               style: {
+                backgroundColor: theme.white,
+              },
+              headerTitleStyle: {
+                alignSelf: 'center',
+              },
+              headerStyle: {
                 backgroundColor: theme.white,
               },
             },

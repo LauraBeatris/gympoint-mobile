@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components/native';
+import { TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export const Container = styled.View`
@@ -20,7 +21,7 @@ export const List = styled.FlatList.attrs({
   margin-top: 25px;
 `;
 
-export const HelpOrderItem = styled.View`
+export const HelpOrderItem = styled(TouchableOpacity)`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -66,4 +67,17 @@ export const HelpOrderQuestion = styled.Text`
   font-size: 14px;
   color: #666666;
   line-height: 25px;
+`;
+
+export const HelpOrderAnswer = styled(HelpOrderQuestion);
+
+export const Type = styled.Text`
+  font-size: 14px;
+  color: #444444;
+  font-weight: bold;
+`;
+
+export const LogoWrapper = styled.View`
+  position: absolute;
+  left: 24%;
 `;
