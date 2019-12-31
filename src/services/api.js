@@ -1,7 +1,9 @@
 import axios from 'axios';
+import { IP_ADDRESS } from 'react-native-dotenv';
 
 const api = axios.create({
-  baseURL: 'http://192.168.1.8:3333',
+  baseURL:
+    `http://${IP_ADDRESS}:3333` || 'http://gympoint-api.lauradeveloper.com/br',
 });
 
 export default api;

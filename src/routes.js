@@ -7,7 +7,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import Signin from '~/pages/SignIn';
 import Checkin from '~/pages/Checkin';
 import HelpOrder from '~/pages/HelpOrder';
-import ViewHelpOrder from '~/pages/HelpOrder/view';
+import ViewHelpOrder from '~/pages/HelpOrder/View';
 import CreateHelpOrder from '~/pages/HelpOrder/New';
 
 import theme from '~/styles/theme';

@@ -69,8 +69,6 @@ export const HelpOrderQuestion = styled.Text`
   line-height: 25px;
 `;
 
-export const HelpOrderAnswer = styled(HelpOrderQuestion);
-
 export const Type = styled.Text`
   font-size: 14px;
   color: #444444;

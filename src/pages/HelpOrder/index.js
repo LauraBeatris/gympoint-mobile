@@ -61,7 +61,7 @@ function HelpOrder({ theme, navigation }) {
   }, []);
 
   useEffect(() => {
-    const newQuestion = navigation.getParam('q  uestion');
+    const newQuestion = navigation.getParam('question');
     console.tron.log(newQuestion);
     if (newQuestion) setHelpOrders([...helpOrders, newQuestion]);
   }, [helpOrders, navigation]);
@@ -80,6 +80,7 @@ function HelpOrder({ theme, navigation }) {
     setPage(1);
     setRefreshing(true);
     setHelpOrders([]);
+    setLoading(true);
 
     try {
       const response = await api.get(`students/${studentId}/checkins`);
@@ -98,6 +99,7 @@ function HelpOrder({ theme, navigation }) {
       );
     } finally {
       setRefreshing(false);
+      setLoading(false);
     }
   }
 
@@ -106,7 +108,7 @@ function HelpOrder({ theme, navigation }) {
   }
 
   return (
-    <Container loading={false}>
+    <Container loading={loading}>
       {!loading ? (
         <>
           <Button onPress={createHelpOrder}> Novo pedido de auxílio </Button>
@@ -123,7 +125,7 @@ function HelpOrder({ theme, navigation }) {
                   <IsAnsweredWrapper>
                     <IsAnsweredIcon answered={!!item.answer_at} />
                     <IsAnsweredText answered={!!item.answer_at}>
-                      Sem resposta
+                      {item.answer_at ? 'Respondido' : 'Sem resposta'}
                     </IsAnsweredText>
                   </IsAnsweredWrapper>
 
@@ -149,7 +151,10 @@ function HelpOrder({ theme, navigation }) {
 
 HelpOrder.propTypes = {
   theme: PropTypes.shape().isRequired,
-  navigation: PropTypes.shape({ navigate: PropTypes.func }).isRequired,
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func,
+    getParam: PropTypes.func,
+  }).isRequired,
 };
 
 HelpOrder.navigationOptions = ({ navigation }) => ({
