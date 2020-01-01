@@ -29,7 +29,7 @@
 </p>
 
 <p align="center">
-  <img src="https://i.ibb.co/tDBZnW4/Whats-App-Image-2020-01-01-at-15-34-08.jpg" alt="Whats-App-Image-2020-01-01-at-15-34-08" border="0"  height="150" >
+  <img src="https://i.ibb.co/tDBZnW4/Whats-App-Image-2020-01-01-at-15-34-08.jpg" alt="Whats-App-Image-2020-01-01-at-15-34-08" border="0"  height="250" >
 </p>
 <br>
 <p align="center">
