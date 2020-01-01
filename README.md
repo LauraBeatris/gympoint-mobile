@@ -22,16 +22,16 @@
 </p>
 
 <p align="center">
-  <a href="#rocket-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="#runner-instalattion">Installation</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="#construction-testing">Testing</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#runner-instalattion">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#construction-testing">Testing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licence">Licence</a>
 </p>
 
 <p align="center">
-  <img src="https://i.ibb.co/tDBZnW4/Whats-App-Image-2020-01-01-at-15-34-08.jpg" alt="Whats-App-Image-2020-01-01-at-15-34-08" border="0"  height="300" >&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <img src="https://i.ibb.co/n860jBs/Whats-App-Image-2020-01-01-at-15-38-09.jpg" alt="Whats-App-Image-2020-01-01-at-15-38-09" border="0" height="300">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <img src="https://i.ibb.co/M7R7HZk/Whats-App-Image-2020-01-01-at-15-43-19.jpg" alt="Whats-App-Image-2020-01-01-at-15-43-19" border="0" height="300">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <img src="https://i.ibb.co/tDBZnW4/Whats-App-Image-2020-01-01-at-15-34-08.jpg" alt="Whats-App-Image-2020-01-01-at-15-34-08" border="0"  height="300" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://i.ibb.co/n860jBs/Whats-App-Image-2020-01-01-at-15-38-09.jpg" alt="Whats-App-Image-2020-01-01-at-15-38-09" border="0" height="300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="https://i.ibb.co/M7R7HZk/Whats-App-Image-2020-01-01-at-15-43-19.jpg" alt="Whats-App-Image-2020-01-01-at-15-43-19" border="0" height="300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
 ## :rocket: About the project
