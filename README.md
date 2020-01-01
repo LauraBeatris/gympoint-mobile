@@ -28,7 +28,7 @@
 </p>
 
 ## :rocket: About the project
-  Mobile App of the **Gympoint System**. As a student, you're able to do checkins, help orders and also get to know what the intructors answered. Students're allowed to do only 5 checkins per week. 
+  Mobile App of the **Gympoint System**. As a student, you're able to do checkins, help orders and also get to know what the instructors answered. Students're allowed to do only 5 checkins per week. 
   
   Future features: 
     - Trainings made by the Personal Trainer
