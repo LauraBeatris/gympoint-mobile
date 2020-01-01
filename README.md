@@ -23,14 +23,28 @@
 
 <p align="center">
   <a href="#rocket-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#ballot_box_with_check-goals">Goals</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#runner-instalattion">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#construction-testing">Testing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licence">Licence</a>
+</p>
+
+<p align="center">
+  <img src="https://i.ibb.co/tDBZnW4/Whats-App-Image-2020-01-01-at-15-34-08.jpg" alt="Whats-App-Image-2020-01-01-at-15-34-08" border="0">
+</p>
+<br>
+<p align="center">
+  <img src="https://i.ibb.co/n860jBs/Whats-App-Image-2020-01-01-at-15-38-09.jpg" alt="Whats-App-Image-2020-01-01-at-15-38-09" border="0">
+</p>
+<br>
+<p align="center">
+  <img src="https://i.ibb.co/M7R7HZk/Whats-App-Image-2020-01-01-at-15-43-19.jpg" alt="Whats-App-Image-2020-01-01-at-15-43-19" border="0">
 </p>
 
 ## :rocket: About the project
   Mobile App of the **Gympoint System**. As a student, you're able to do checkins, help orders and also get to know what the instructors answered. Students're allowed to do only 5 checkins per week. 
   
   Future features: 
+    <br>
     - Trainings made by the Personal Trainer
     - Students can access some datas that show how they've been improving in their trainings
  
@@ -39,9 +53,24 @@
   To see the **admin interface**, click here to take a look in the web aplicattion: [Gympoint Web](https://github.com/LauraBeatris/gympoint-web)
 
 
-## :ballot_box_with_check: Goals
+## :runner: Installation 
 
-Apply all the important concepts of a Rest API with Express and Sequelize ORM, using a services like PostgreSQL, MongoDB, Redis with BeeQueue and Nodemailer with Mailgun. 
+```   
+  // 1 - Git Clone
+  
+  // 2 - Installing the project (Be sure to have installed the react native cli)
+ react-native run-android
+  
+  // 3 - Run the apllication (Be sure to have the API running locally)
+  yarn start
+  
+  // If usually use have some error, try it 
+  yarn start --reset-cache
+  
+```
+
+## :construction: Testing 
+Soon.
 
 
 ## :memo: Licence
