@@ -75,7 +75,7 @@ export const Type = styled.Text`
   font-weight: bold;
 `;
 
-export const LogoWrapper = styled.View`
+export const LogoWrapper = styled.SafeAreaView`
   position: absolute;
   left: 24%;
 `;

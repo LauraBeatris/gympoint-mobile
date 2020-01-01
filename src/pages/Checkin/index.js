@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { Alert, ActivityIndicator } from 'react-native';
 import { withTheme } from 'styled-components';
+import { pt } from 'date-fns/locale';
+import { formatRelative, parseISO } from 'date-fns';
 
 import CheckinItem from '~/components/CheckinItem';
 import Button from '~/components/Button';
@@ -42,13 +44,15 @@ function Checkin({ theme }) {
   }, []);
 
   async function handleNextPage() {
-    setPage(page + 1);
-    const response = await api.get(
-      `students/${studentId}/checkins?page=${page}`
-    );
+    if (checkins.length >= 10) {
+      setPage(page + 1);
+      const response = await api.get(
+        `students/${studentId}/checkins?page=${page}`
+      );
 
-    const data = formatDate(response.data);
-    setCheckins(data);
+      const data = formatDate(response.data);
+      setCheckins(data);
+    }
   }
 
   async function handleRefreshing() {
@@ -78,9 +82,21 @@ function Checkin({ theme }) {
 
   async function createCheckIn() {
     try {
+      setLoading(true);
       const response = await api.post(`students/${studentId}/checkins`);
-
-      return setCheckins([...checkins, response.data]);
+      const data = {
+        ...response.data,
+        formattedDate: formatRelative(
+          parseISO(response.data.createdAt),
+          new Date(),
+          {
+            addSuffix: true,
+            locale: pt,
+          }
+        ),
+      };
+      console.tron.log(checkins);
+      return setCheckins([...checkins, data]);
     } catch (err) {
       const { contentMessage } = JSON.parse(err.response.data.error.message);
 
@@ -89,6 +105,8 @@ function Checkin({ theme }) {
       }
 
       return Alert.alert('Erro', 'Não foi possivel realizar um novo checkin');
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -104,7 +122,7 @@ function Checkin({ theme }) {
               <CheckinItem checkinNumber={index} date={item.formattedDate} />
             )}
             onEndReached={handleNextPage}
-            onEndReachedThreshold={0.1}
+            onEndReachedThreshold={0.8}
             refreshing={refreshing}
             onRefresh={handleRefreshing}
           />

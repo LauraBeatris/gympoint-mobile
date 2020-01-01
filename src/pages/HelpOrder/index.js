@@ -60,12 +60,6 @@ function HelpOrder({ theme, navigation }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    const newQuestion = navigation.getParam('question');
-    console.tron.log(newQuestion);
-    if (newQuestion) setHelpOrders([...helpOrders, newQuestion]);
-  }, [helpOrders, navigation]);
-
   async function handleNextPage() {
     setPage(page + 1);
     const response = await api.get(
@@ -83,7 +77,7 @@ function HelpOrder({ theme, navigation }) {
     setLoading(true);
 
     try {
-      const response = await api.get(`students/${studentId}/checkins`);
+      const response = await api.get(`students/${studentId}/help-orders`);
       const data = formatDate(response.data);
       return setHelpOrders(data);
     } catch (err) {
