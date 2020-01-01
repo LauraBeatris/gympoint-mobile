@@ -3,12 +3,12 @@
 </h1>
 
 <h3 align="center">
-  Express Application for a Gym Management App
+  Gym Management Application made with React Native
 </h3>
 
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/LauraBeatris/gympoint-api?color=%23EE4D64">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/LauraBeatris/gympoint-mobile?color=%23EE4D64">
 
   <a href="https://www.linkedin.com/in/laurabeatris/">
     <img alt="Made by Laura Beatris" src="https://img.shields.io/badge/made%20by-laurabeatris-%23EE4D64">
@@ -17,7 +17,7 @@
   <img alt="License" src="https://img.shields.io/badge/licence-MIT-%23EE4D64">
 
   <a href="https://github.com/LauraBeatris/projects_store/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/LauraBeatris/gympoint-api?color=%23EE4D64">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/LauraBeatris/gympoint-mobile?color=%23EE4D64">
   </a>
 </p>
 
@@ -28,7 +28,7 @@
 </p>
 
 ## :rocket: About the project
-  Api for a **Gym Management Application** As a admin, you're able to see the list of students, registrations and plans, as well edting/registering them. Answering and see the help orders that're pending. 
+  Mobile App of the **Gympoint System**. As a student, you're able to do checkins, help orders and also get to know what the intructors answered. Students're allowed to do only 5 checkins per week. 
   
   Future features: 
     - Trainings made by the Personal Trainer
