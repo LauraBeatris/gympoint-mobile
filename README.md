@@ -11,7 +11,7 @@
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/LauraBeatris/gympoint-mobile?color=%23EE4D64">
 
   <a href="https://www.linkedin.com/in/laurabeatris/">
-    <img alt="Made by Laura Beatris" src="https://img.shields.io/badge/made%20by-laurabeatris-%23EE4D64">
+    <img alt="Made by Laura Beatris" height="100" src="https://img.shields.io/badge/made%20by-laurabeatris-%23EE4D64">
   </a>
 
   <img alt="License" src="https://img.shields.io/badge/licence-MIT-%23EE4D64">
