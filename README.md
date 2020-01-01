@@ -31,11 +31,9 @@
 <p align="center">
   <img src="https://i.ibb.co/tDBZnW4/Whats-App-Image-2020-01-01-at-15-34-08.jpg" alt="Whats-App-Image-2020-01-01-at-15-34-08" border="0"  height="300" >
 </p>
-<br>
 <p align="center">
   <img src="https://i.ibb.co/n860jBs/Whats-App-Image-2020-01-01-at-15-38-09.jpg" alt="Whats-App-Image-2020-01-01-at-15-38-09" border="0" height="300">
 </p>
-<br>
 <p align="center">
   <img src="https://i.ibb.co/M7R7HZk/Whats-App-Image-2020-01-01-at-15-43-19.jpg" alt="Whats-App-Image-2020-01-01-at-15-43-19" border="0" height="300">
 </p>
