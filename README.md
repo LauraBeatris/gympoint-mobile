@@ -50,10 +50,13 @@
 ## :runner: Installation 
 
 ```   
-  // 1 - Git Clone
+ // 1 - Git Clone
   
-  // 2 - Installing the project (Be sure to have installed the react native cli)
+  // 2 - Copy the .env.example and set the environment variables
+  cp .env.example .env
   
+  // 3 - Installing the project (Be sure to have installed the react native cli)
+
    // If you're going to emulate with android - run this command 
    react-native run-android 
    // If you're going to emulate with ios - run this command 
@@ -62,11 +65,8 @@
   // 3 - Run the application (Be sure to have the API running locally)
     yarn start
   
-  // 3 - Run the application (Be sure to have the API running locally)
-  yarn start
-  
   // If usually use have some error, try it 
-  yarn start --reset-cache
+    yarn start --reset-cache
   
 ```
 
