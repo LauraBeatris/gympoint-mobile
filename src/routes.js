@@ -73,6 +73,7 @@ export default (signedIn = false) =>
             },
           },
           {
+            resetOnBlur: true,
             tabBarOptions: {
               keyboardHidesTabBar: true,
               activeTintColor: theme.primary,

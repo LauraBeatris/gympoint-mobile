@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { ActivityIndicator, Alert } from 'react-native';
 import { withTheme } from 'styled-components';
+import { withNavigationFocus } from 'react-navigation';
 
 import api from '~/services/api';
 import formatDate from '~/helpers/formatDate';
@@ -21,7 +22,7 @@ import {
 import Button from '~/components/Button';
 import Header from '~/components/Header';
 
-function HelpOrder({ theme, navigation }) {
+function HelpOrder({ theme, isFocused, navigation }) {
   const studentId = useSelector(state => state.auth.id);
 
   const [helpOrders, setHelpOrders] = useState([]);
@@ -29,36 +30,37 @@ function HelpOrder({ theme, navigation }) {
   const [page, setPage] = useState(1);
   const [refreshing, setRefreshing] = useState(false);
 
-  async function getHelpOrders() {
-    try {
-      setLoading(true);
-
-      const response = await api.get(
-        `students/${studentId}/help-orders?page=${page}`
-      );
-
-      const data = formatDate(response.data);
-      return setHelpOrders(data);
-    } catch (err) {
-      const { contentMessage } = JSON.parse(err.response.data.error.message);
-
-      if (contentMessage) {
-        return Alert.alert('Erro', contentMessage);
-      }
-
-      return Alert.alert(
-        'Erro',
-        'Não foi possivel listar seus pedidos de ajuda. Tente novamente'
-      );
-    } finally {
-      setLoading(false);
-    }
-  }
-
   useEffect(() => {
-    getHelpOrders();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    async function getHelpOrders() {
+      try {
+        setLoading(true);
+
+        const response = await api.get(
+          `students/${studentId}/help-orders?page=${page}`
+        );
+
+        const data = formatDate(response.data);
+        return setHelpOrders(data);
+      } catch (err) {
+        const { contentMessage } = JSON.parse(err.response.data.error.message);
+
+        if (contentMessage) {
+          return Alert.alert('Erro', contentMessage);
+        }
+
+        return Alert.alert(
+          'Erro',
+          'Não foi possivel listar seus pedidos de ajuda. Tente novamente'
+        );
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    if (isFocused) {
+      getHelpOrders();
+    }
+  }, [isFocused, page, studentId]);
 
   async function handleNextPage() {
     setPage(page + 1);
@@ -145,6 +147,7 @@ function HelpOrder({ theme, navigation }) {
 
 HelpOrder.propTypes = {
   theme: PropTypes.shape().isRequired,
+  isFocused: PropTypes.bool.isRequired,
   navigation: PropTypes.shape({
     navigate: PropTypes.func,
     getParam: PropTypes.func,
@@ -155,4 +158,4 @@ HelpOrder.navigationOptions = ({ navigation }) => ({
   header: <Header navigation={navigation} />,
 });
 
-export default withTheme(HelpOrder);
+export default withNavigationFocus(withTheme(HelpOrder));

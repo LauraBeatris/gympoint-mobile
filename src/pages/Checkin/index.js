@@ -5,6 +5,7 @@ import { Alert, ActivityIndicator } from 'react-native';
 import { withTheme } from 'styled-components';
 import { pt } from 'date-fns/locale';
 import { formatRelative, parseISO } from 'date-fns';
+import { withNavigationFocus } from 'react-navigation';
 
 import CheckinItem from '~/components/CheckinItem';
 import Button from '~/components/Button';
@@ -15,33 +16,35 @@ import { Container, List } from './styles';
 import api from '~/services/api';
 import formatDate from '~/helpers/formatDate';
 
-function Checkin({ theme }) {
+function Checkin({ theme, isFocused }) {
   const [checkins, setCheckins] = useState([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const studentId = useSelector(state => state.auth.id);
 
-  async function getCheckins() {
-    try {
-      setLoading(true);
-      const response = await api.get(
-        `students/${studentId}/checkins?page=${page}`
-      );
-
-      const data = formatDate(response.data);
-      setCheckins(page >= 2 ? [...checkins, ...data] : data);
-    } catch (err) {
-      Alert.alert('Erro', 'Erro ao listar check-ins, tente novamente');
-    } finally {
-      setLoading(false);
-    }
-  }
-
   useEffect(() => {
-    getCheckins();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    async function getCheckins() {
+      try {
+        setLoading(true);
+        const response = await api.get(
+          `students/${studentId}/checkins?page=${page}`
+        );
+
+        const data = formatDate(response.data);
+        setCheckins(page >= 2 ? [...checkins, ...data] : data);
+      } catch (err) {
+        Alert.alert('Erro', 'Erro ao listar check-ins, tente novamente');
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    if (isFocused) {
+      getCheckins();
+    }
+    //  eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isFocused, page, studentId]);
 
   async function handleNextPage() {
     if (checkins.length > 10) {
@@ -95,7 +98,6 @@ function Checkin({ theme }) {
           }
         ),
       };
-      console.tron.log(checkins);
       return setCheckins([...checkins, data]);
     } catch (err) {
       const { contentMessage } = JSON.parse(err.response.data.error.message);
@@ -140,6 +142,7 @@ Checkin.navigationOptions = ({ navigation }) => ({
 
 Checkin.propTypes = {
   theme: PropTypes.shape().isRequired,
+  isFocused: PropTypes.bool.isRequired,
 };
 
-export default withTheme(Checkin);
+export default withNavigationFocus(withTheme(Checkin));
