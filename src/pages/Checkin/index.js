@@ -44,7 +44,7 @@ function Checkin({ theme }) {
   }, []);
 
   async function handleNextPage() {
-    if (checkins.length >= 10) {
+    if (checkins.length > 10) {
       setPage(page + 1);
       const response = await api.get(
         `students/${studentId}/checkins?page=${page}`
