@@ -55,7 +55,7 @@
   // 2 - Installing the project (Be sure to have installed the react native cli)
  react-native run-android
   
-  // 3 - Run the apllication (Be sure to have the API running locally)
+  // 3 - Run the application (Be sure to have the API running locally)
   yarn start
   
   // If usually use have some error, try it 
