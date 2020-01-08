@@ -139,7 +139,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.lauradeveloper.gympoint_react_app"
+        applicationId "com.laurabeatris.gympoint"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
@@ -163,14 +163,21 @@ android {
     }
     buildTypes {
         debug {
-            signingConfig signingConfigs.debug
+            buildConfigField "String", "CODEPUSH_KEY", '""'
         }
+
+        releaseStaging { 
+            buildConfigField "String", "CODEPUSH_KEY", '"zozKXrU5dKn4b1echDg_5Z2K9Xxq0-K_wm0N8"'
+            matchingFallbacks = ["debug", "release"]
+        }
+
         release {
             // Caution! In production, you need to generate your own keystore file.
             // see https://facebook.github.io/react-native/docs/signed-apk-android.
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            buildConfigField "String", "CODEPUSH_KEY", '"H431kgMvFjK_LtDwRFKzzXCXEs9AF-c-vicN3"'
         }
     }
     // applicationVariants are e.g. debug, release
@@ -190,6 +197,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-onesignal')
     implementation project(':react-native-code-push')
     implementation project(':@react-native-community_async-storage')
     implementation fileTree(dir: "libs", include: ["*.jar"])
