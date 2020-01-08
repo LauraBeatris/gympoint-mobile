@@ -28,32 +28,9 @@ class Main extends Component {
     OneSignal.removeEventListener('ids');
   }
 
-  onReceived = notificationData => {
-    console.tron.log(
-      'It seems that you received a notification',
-      notificationData
-    );
-  };
+  onReceived = notificationData => {};
 
-  onOpened = openResult => {
-    console.tron.log(
-      'Take a look at the notification message: ',
-      openResult.notification.payload.body
-    );
-    console.tron.log(
-      'Ow! You can even see the data of it',
-      openResult.notification.payload.additionalData
-    );
-    console.tron.log(
-      'Are the user looking at it?',
-      openResult.notification.isAppInFocus
-    );
-    console.tron.log('Thats a surprise', openResult);
-  };
-
-  onIdsRegister = device => {
-    console.log('Registed device info: ', device);
-  };
+  onIdsRegister = device => {};
 
   render() {
     return (
