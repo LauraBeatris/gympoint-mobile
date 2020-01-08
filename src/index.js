@@ -1,28 +1,74 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { StatusBar } from 'react-native';
 import { ThemeProvider } from 'styled-components';
 import CodePush from 'react-native-code-push';
+import OneSignal from 'react-native-onesignal';
 
 import theme from '~/styles/theme';
 import '~/config/ReactotronConfig';
 import { store, persistor } from '~/store';
 import App from './App';
 
-function Main() {
-  return (
-    <>
-      <Provider store={store}>
-        <PersistGate persistor={persistor}>
-          <ThemeProvider theme={theme}>
-            <StatusBar barStyle="dark-content" backgroundColor="#fff" />
-            <App />
-          </ThemeProvider>
-        </PersistGate>
-      </Provider>
-    </>
-  );
+class Main extends Component {
+  constructor(props) {
+    super(props);
+    OneSignal.init('9b484f3e-ef29-4250-a8e9-211e1ab012e5');
+
+    OneSignal.addEventListener('received', this.onReceived);
+    OneSignal.addEventListener('opened', this.onOpened);
+    OneSignal.addEventListener('ids', this.onIdsRegister);
+    OneSignal.inFocusDisplaying(2);
+  }
+
+  UNSAFE_componentWillMount() {
+    OneSignal.removeEventListener('received');
+    OneSignal.removeEventListener('opened');
+    OneSignal.removeEventListener('ids');
+  }
+
+  onReceived = notificationData => {
+    console.tron.log(
+      'It seems that you received a notification',
+      notificationData
+    );
+  };
+
+  onOpened = openResult => {
+    console.tron.log(
+      'Take a look at the notification message: ',
+      openResult.notification.payload.body
+    );
+    console.tron.log(
+      'Ow! You can even see the data of it',
+      openResult.notification.payload.additionalData
+    );
+    console.tron.log(
+      'Are the user looking at it?',
+      openResult.notification.isAppInFocus
+    );
+    console.tron.log('Thats a surprise', openResult);
+  };
+
+  onIdsRegister = device => {
+    console.log('Registed device info: ', device);
+  };
+
+  render() {
+    return (
+      <>
+        <Provider store={store}>
+          <PersistGate persistor={persistor}>
+            <ThemeProvider theme={theme}>
+              <StatusBar barStyle="dark-content" backgroundColor="#fff" />
+              <App />
+            </ThemeProvider>
+          </PersistGate>
+        </Provider>
+      </>
+    );
+  }
 }
 
 export default CodePush({
