@@ -128,7 +128,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.gympoint-react-app"
+        applicationId "com.laurabeatris.gympoint"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
