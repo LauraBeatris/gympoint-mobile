@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.7.1",
+    "appcenter-cli": "^2.3.3",
     "axios": "^0.19.0",
     "date-fns": "^2.0.0-beta.5",
+    "global": "^4.4.0",
     "immer": "^5.1.0",
     "prop-types": "^15.7.2",
     "react": "16.9.0",
@@ -20,6 +22,7 @@
     "react-native-code-push": "^6.0.0",
     "react-native-dotenv": "^0.2.0",
     "react-native-gesture-handler": "^1.5.3",
+    "react-native-onesignal": "^3.6.1",
     "react-native-reanimated": "^1.4.0",
     "react-native-screens": "^2.0.0-alpha.22",
     "react-native-vector-icons": "^6.6.0",
