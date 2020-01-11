@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { StatusBar } from 'react-native';
 import { ThemeProvider } from 'styled-components';
-import CodePush from 'react-native-code-push';
+import codePush from 'react-native-code-push';
 import OneSignal from 'react-native-onesignal';
 
 import theme from '~/styles/theme';
@@ -48,6 +48,9 @@ class Main extends Component {
   }
 }
 
-export default CodePush({
-  checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
-})(Main);
+const codePushOptions = {
+  checkFrequency: codePush.CheckFrequency.ON_APP_RESUME,
+  installMode: codePush.InstallMode.ON_NEXT_RESUME,
+};
+
+export default codePush(codePushOptions)(Main);
