@@ -36,7 +36,7 @@ function HelpOrder({ theme, isFocused, navigation }) {
         setLoading(true);
 
         const response = await api.get(
-          `students/${studentId}/help-orders?page=${page}`
+          `students/${studentId}/help-orders?page=1`
         );
 
         const data = formatDate(response.data);
@@ -60,7 +60,7 @@ function HelpOrder({ theme, isFocused, navigation }) {
     if (isFocused) {
       getHelpOrders();
     }
-  }, [isFocused, page, studentId]);
+  }, [isFocused, studentId]);
 
   async function handleNextPage() {
     setPage(page + 1);
@@ -133,7 +133,7 @@ function HelpOrder({ theme, isFocused, navigation }) {
               </HelpOrderItem>
             )}
             onEndReached={handleNextPage}
-            onEndReachedThreshold={0.1}
+            onEndReachedThreshold={0.8}
             refreshing={refreshing}
             onRefresh={handleRefreshing}
           />
