@@ -162,12 +162,10 @@ android {
         }
 
         release {
-            if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
                 storeFile file(gympoint.keystore)
                 storePassword 123456
                 keyAlias gympointapp
                 keyPassword 123456
-            }
         }
     }
     buildTypes {
