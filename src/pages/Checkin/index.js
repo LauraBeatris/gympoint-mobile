@@ -100,13 +100,10 @@ function Checkin({ theme, isFocused }) {
       };
       return setCheckins([...checkins, data]);
     } catch (err) {
-      const { contentMessage } = JSON.parse(err.response.data.error.message);
-
-      if (contentMessage) {
-        return Alert.alert('Erro', contentMessage);
-      }
-
-      return Alert.alert('Erro', 'Não foi possivel realizar um novo checkin');
+      return Alert.alert(
+        'Erro',
+        'Você já realizou 5 checkins nos últimos 7 dias.'
+      );
     } finally {
       setLoading(false);
     }
