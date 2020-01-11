@@ -178,6 +178,10 @@ android {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             buildConfigField "String", "CODEPUSH_KEY", '"H431kgMvFjK_LtDwRFKzzXCXEs9AF-c-vicN3"'
+            storeFile rootProject.file("app/gympoint.keystore")
+            storePassword "eamsc4544"
+            keyAlias "gympoint"
+            keyPassword "eamsc4544"
         }
     }
     // applicationVariants are e.g. debug, release
