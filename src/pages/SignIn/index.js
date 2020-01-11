@@ -33,7 +33,7 @@ export default function Signin({ navigation }) {
         />
 
         <Button loading={loading} onPress={handleSubmit}>
-          Another example
+          Entrar no sistema
         </Button>
       </Form>
     </Container>
