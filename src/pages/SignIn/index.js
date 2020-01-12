@@ -33,8 +33,7 @@ export default function Signin({ navigation }) {
         />
 
         <Button loading={loading} onPress={handleSubmit}>
-          {' '}
-          Entrar ai
+          Entrar no sistema
         </Button>
       </Form>
     </Container>
