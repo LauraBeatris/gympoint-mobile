@@ -35,9 +35,8 @@
 </p>
 
 ## :rocket: About the project
-  Mobile App of the **Gympoint System**. As a student, you're able to do checkins, help orders and also get to know what the instructors answered. Students're allowed to do only 5 checkins per week. 
+  Mobile App **(Only available for Mobile)** of the **Gympoint System**. As a student, you're able to do checkins, help orders and also get to know what the instructors answered. Students're allowed to do only 5 checkins per week. 
   </br>
-  **Its only available for android**
   
   Future features: 
     <br>
