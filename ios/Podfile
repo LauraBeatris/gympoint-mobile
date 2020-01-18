@@ -40,6 +40,8 @@ target 'mobile' do
 
   pod 'react-native-onesignal', :path => '../node_modules/react-native-onesignal'
 
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
   target 'mobileTests' do
     inherit! :search_paths
     # Pods for testing

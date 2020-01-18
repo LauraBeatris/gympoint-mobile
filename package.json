@@ -43,6 +43,7 @@
     "@babel/runtime": "^7.7.7",
     "@react-native-community/eslint-config": "^0.0.5",
     "@testing-library/jest-native": "^3.1.0",
+    "@testing-library/react-native": "^5.0.3",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-plugin-root-import": "^6.4.1",
@@ -62,8 +63,11 @@
     "react-test-renderer": "16.9.0"
   },
   "jest": {
-    "preset": "react-native",
-    "setupFilesAfterEnv": ["@testing-library/jest-native/extend-expect"],
+    "preset": "@testing-library/react-native",
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect",
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
+    ],
     "testMatch": [
       "**/__tests__/**/*.test.js"
     ],

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { signInRequest } from '~/store/modules/auth/actions';
@@ -8,7 +7,7 @@ import { Container, Form, StyledInput, Image } from './styles';
 import Button from '~/components/Button';
 import Logo from '~/assets/logo.jpg';
 
-export default function Signin({ navigation }) {
+export default function Signin() {
   const loading = useSelector(state => state.auth.loading);
   const dispatch = useDispatch();
 
@@ -30,19 +29,13 @@ export default function Signin({ navigation }) {
           placeholder="Informe seu ID de cadastro"
           onTextChange
           onChangeText={id => setStudentId(id)}
+          testID="id-input"
         />
 
         <Button loading={loading} onPress={handleSubmit}>
-          {' '}
-          Entrar ai
+          Entrar no sistema
         </Button>
       </Form>
     </Container>
   );
 }
-
-Signin.propTypes = {
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func,
-  }).isRequired,
-};
