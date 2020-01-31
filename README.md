@@ -25,7 +25,6 @@
   <a href="#rocket-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#runner-itallation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#construction-testing">Testing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licence">Licence</a>
 </p>
 
 <p align="center">
@@ -75,9 +74,6 @@
 Soon.
 
 
-## :memo: Licence
-
-MIT Licence. See the file [LICENSE](LICENSE.md) for more details.
 
 ---
 
