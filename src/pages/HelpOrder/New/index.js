@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import { ActivityIndicator, Alert, Image } from 'react-native';
+import { Alert, Image } from 'react-native';
 
 import { Container, LogoWrapper } from '../styles';
 import { SubmitButton } from './styles';

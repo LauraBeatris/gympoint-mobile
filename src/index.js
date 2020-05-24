@@ -28,10 +28,6 @@ class Main extends Component {
     OneSignal.removeEventListener('ids');
   }
 
-  onReceived = notificationData => {};
-
-  onIdsRegister = device => {};
-
   render() {
     return (
       <>
