@@ -72,7 +72,7 @@ Make sure to go to the [Gympoint Rest API](https://github.com/LauraBeatris/gympo
 
 Run the following command in order to start the application in a development environment:
 
-It's important to mention that this application is only available for android.
+It's important to mention that this application is **only available for android.**
 
 ```
   // Install the application in a android device
