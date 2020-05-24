@@ -90,7 +90,7 @@ It's important to mention that this application is **only available for android.
 
 # :bug: Issues
 
-Feel free to **file a new issue** with a respective title and description on the the [Gympoint Web](https://github.com/LauraBeatris/gympoint-mobile/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**! Have a look at our [contribution guidelines](https://github.com/LauraBeatris/gympoint-mobile/blob/master/CONTRIBUTING.md) to find out about the coding standards.
+Feel free to **file a new issue** with a respective title and description on the the [Gympoint Mobile](https://github.com/LauraBeatris/gympoint-mobile/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**! Have a look at our [contribution guidelines](https://github.com/LauraBeatris/gympoint-mobile/blob/master/CONTRIBUTING.md) to find out about the coding standards.
 
 # :tada: Contributing
 
