@@ -86,7 +86,7 @@ It's important to mention that this application is only available for android.
 
 **Question:** What are the tecnologies used in this project?
 
-**Answer:** The tecnologies used in this project are [React](https://nodejs.org/en/) + [Styled Components](https://styled-components.com/) to handle scoped CSS.
+**Answer:** The tecnologies used in this project are [React Native](https://reactnative.dev/) + [Styled Components](https://styled-components.com/) to handle scoped CSS.
 
 # :bug: Issues
 
