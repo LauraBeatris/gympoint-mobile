@@ -1,31 +1,29 @@
-<h1 align="center">
-  <img alt="Gympoint" title="Gympoint" src=".github/logo.png" width="200px" style="border-radius:100px"/>
-</h1>
-
-<h3 align="center">
-  Gym Management Application made with React Native
-</h3>
-
-
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/LauraBeatris/gympoint-mobile?color=%23EE4D64">
-
-  <a href="https://www.linkedin.com/in/laurabeatris/">
-    <img alt="Made by Laura Beatris" src="https://img.shields.io/badge/made%20by-laurabeatris-%23EE4D64">
-  </a>
-
-  <img alt="License" src="https://img.shields.io/badge/licence-MIT-%23EE4D64">
-
-  <a href="https://github.com/LauraBeatris/projects_store/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/LauraBeatris/gympoint-mobile?color=%23EE4D64">
-  </a>
+   <img src=".github/logo.png" width="150"/>
 </p>
 
-<p align="center">
-  <a href="#rocket-about-the-project">About the project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#runner-itallation">Installation</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#construction-testing">Testing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-</p>
+# Gympoint Mobile
+
+
+[![Author](https://img.shields.io/badge/author-LauraBeatris-EE4D64?style=flat-square)](https://github.com/LauraBeatris)
+[![Languages](https://img.shields.io/github/languages/count/LauraBeatris/gympoint-mobile?color=%23EE4D64&style=flat-square)](#)
+[![Stars](https://img.shields.io/github/stars/LauraBeatris/gympoint-mobile?color=EE4D64&style=flat-square)](https://github.com/LauraBeatris/gympoint-mobile/stargazers)
+[![Forks](https://img.shields.io/github/forks/LauraBeatris/gympoint-mobile?color=%23EE4D64&style=flat-square)](https://github.com/LauraBeatris/gympoint-mobile/network/members)
+[![Contributors](https://img.shields.io/github/contributors/LauraBeatris/gympoint-mobile?color=EE4D64&style=flat-square)](https://github.com/LauraBeatris/gympoint-mobile/graphs/contributors)
+
+> Enjoy your gym enrollment by easily doing check-ins and sending questions to your instructions
+
+---
+
+# :pushpin: Table of Contents
+
+* [Features](#rocket-features)
+* [Installation](#construction_worker-installation)
+* [Getting Started](#runner-getting-started)
+* [FAQ](#postbox-faq)
+* [Found a bug? Missing a specific feature?](#bug-issues)
+* [Contributing](#tada-contributing)
+* [License](#closed_book-license)
 
 <p align="center">
   <img src="https://i.ibb.co/tDBZnW4/Whats-App-Image-2020-01-01-at-15-34-08.jpg" alt="Whats-App-Image-2020-01-01-at-15-34-08" border="0"  height="300" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -33,48 +31,74 @@
   <img src="https://i.ibb.co/M7R7HZk/Whats-App-Image-2020-01-01-at-15-43-19.jpg" alt="Whats-App-Image-2020-01-01-at-15-43-19" border="0" height="300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
-## :rocket: About the project
-  Mobile App **(Only available for Android)** of the **Gympoint System**. As a student, you're able to do checkins, help orders and also get to know what the instructors answered about your questions. Students are allowed to do only 5 checkins per week. 
-  </br>
-  
-  Future features: 
-    <br>
-    - Trainings made by the Personal Trainer
-    - Students can access some datas that show how they've been improving in their trainings
- 
- To see the **api**, click here: [Gympoint Rest API](https://github.com/LauraBeatris/gympoint-api)
- <br>
-  To see the **admin interface**, click here to take a look in the web aplicattion: [Gympoint Web](https://github.com/LauraBeatris/gympoint-web)
+# :rocket: Features
 
+* Do check-ins
+* Send questions to your instructions and receive their answers
 
-## :runner: Installation 
+It's important to mention that this is one of the applications from the **Gympoint System**
 
-```   
- // 1 - Git Clone
-  
-  // 2 - Copy the .env.example and set the environment variables
-  cp .env.example .env
-  
-  // 3 - Installing the project (Be sure to have installed the react native cli)
+In order to explore the others, feel free to click in the links above:
+- [Gympoint Web](https://github.com/LauraBeatris/gympoint-web)
+- [Gympoint API](https://github.com/LauraBeatris/gympoint-api)
 
-   // If you're going to emulate with android - run this command 
-   react-native run-android 
-   // If you're going to emulate with ios - run this command 
-   react-native run-ios 
-  
-  // 3 - Run the application (Be sure to have the API running locally)
-    yarn start
-  
-  // If usually use have some error, try it 
-    yarn start --reset-cache
-  
+# :construction_worker: Installation
+
+**You need to install [Node.js](https://nodejs.org/en/download/), [Yarn](https://yarnpkg.com/), [Android SDK](https://medium.com/surabayadev/setting-up-react-native-android-without-android-studio-35a496e1dfa3) first and then, in order to clone the project via HTTPS, run this command:**
+
+```git clone https://github.com/LauraBeatris/gympoint-mobile.git```
+
+SSH URLs provide access to a Git repository via SSH, a secure protocol. If you have a SSH key registered in your Github account, clone the project using this command:
+
+```git clone git@github.com:LauraBeatris/gympoint-mobile.git```
+
+**Install dependencies**
+
+```yarn install```
+
+Create your enviroment variables based on the examples of ```.env.example```
+
+```cp .env.example .env```
+
+After copying the examples, make sure to fill the variables with new values.
+
+**Setup the API**
+
+The interface needs to interact with the server to get execute mutations related to check-ins and questions.
+
+Make sure to go to the [Gympoint Rest API](https://github.com/LauraBeatris/gympoint-api) repository and follow the instructions in order to get it running in your machine.
+
+# :runner: Getting Started
+
+Run the following command in order to start the application in a development environment:
+
+It's important to mention that this application is only available for android.
+
+```
+  // Install the application in a android device
+  react-native run-android
+
+  // Start the application
+  yarn start
 ```
 
-## :construction: Testing 
-Soon.
+# :postbox: Faq
 
+**Question:** What are the tecnologies used in this project?
 
+**Answer:** The tecnologies used in this project are [React](https://nodejs.org/en/) + [Styled Components](https://styled-components.com/) to handle scoped CSS.
 
----
+# :bug: Issues
 
-Made with ♥ by Laura :wave: [See my linkedin!](https://www.linkedin.com/in/laurabeatris/)
+Feel free to **file a new issue** with a respective title and description on the the [Gympoint Web](https://github.com/LauraBeatris/gympoint-mobile/issues) repository. If you already found a solution to your problem, **i would love to review your pull request**! Have a look at our [contribution guidelines](https://github.com/LauraBeatris/gympoint-mobile/blob/master/CONTRIBUTING.md) to find out about the coding standards.
+
+# :tada: Contributing
+
+Check out the [contributing](https://github.com/LauraBeatris/gympoint-mobile/blob/master/CONTRIBUTING.md) page to see the best places to file issues, start discussions and begin contributing.
+
+# :closed_book: License
+
+Released in 2019.
+This project is under the [MIT license](https://github.com/LauraBeatris/gympoint-mobile/master/LICENSE).
+
+Made with love by [Laura Beatris](https://github.com/LauraBeatris) 💜🚀
