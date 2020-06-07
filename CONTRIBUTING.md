@@ -21,6 +21,6 @@ This project follow the [Conventinal Commits](https://www.conventionalcommits.or
 If you encounter a problem with this project, please open an issue. Be sure to include:
 
 - Package version
-- Node and React versions
+- Node and React Native versions
 - Brief but thorough description of the issue
 - Link to a CodeSandbox (or similar) demonstrating the problem (optional, but highly recommended, especially for complex problems)
